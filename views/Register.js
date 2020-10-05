@@ -14,6 +14,7 @@ export default class ResumeForm extends ValidationComponent {
     address: '',
   }
 
+  
   _onSubmit = () => {
     const isValid = this.validate({
       name: { required: true },
@@ -22,6 +23,7 @@ export default class ResumeForm extends ValidationComponent {
       password: { required: true, numbers: true ,secureTextEntry:true},
       comfirmpassword: { required: true, numbers: true ,secureTextEntry:true},
       address: { required: true },
+    
     });
     if(isValid){
       const formData = new FormData();
@@ -110,7 +112,11 @@ export default class ResumeForm extends ValidationComponent {
           />
         </View>
         <View style={{ marginTop: 20,alignItems: 'center',}}>
-           <Button buttonStyle={{ borderRadius:50,width:200,backgroundColor:'#F5C2C2',marginBottom:5}}  onPress={this._onSubmit} color='#F5C2C2' title="Create Account"></Button> 
+           <Button buttonStyle={{ borderRadius:50,width:200,backgroundColor:'#F5C2C2',marginBottom:5}} 
+            onPress={() => {this._onSubmit 
+              alert('Register Done!');
+            }}
+             color='#F5C2C2' title="Create Account"></Button> 
         </View>
       </View>
     )
@@ -125,7 +131,7 @@ const styles = StyleSheet.create({
     width:'100%',
     paddingHorizontal: 10,
     marginVertical:7, },
-  textAreaInput: { marginTop:10,borderRadius : 30,backgroundColor : 'white',height: 100, borderColor: 'gray', borderWidth: 1 },
+  textAreaInput: { marginTop:10,borderRadius : 30,backgroundColor : 'white',height: 100, borderColor: '#61AC7F', borderWidth: 1 },
   errorMesspassword: { color: 'red', marginBottom: 20 },
   textwhite:{
     color: 'white'
