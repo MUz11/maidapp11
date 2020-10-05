@@ -21,18 +21,20 @@ export default function LoginScreen({navigation}) {
           <View>
               <Image 
               style={style.logo}
-              source={require('../assets/broom.png')}/>
+              source={require('../assets/broom1.png')}/>
           </View>
           <View style={style.input_view}>
-              <TextInput placeholder="USERNAME"style={style.text_input} ></TextInput>
-              <TextInput placeholder="PASSWORD" style={style.text_input} secureTextEntry={true}></TextInput>
+              <Text style={{ color: 'white',fontSize:17 }}> Username :</Text>
+              <TextInput style={style.text_input} ></TextInput>
+              <Text style={{ color: 'white',fontSize:17 }}> Password :</Text>
+              <TextInput style={style.text_input} secureTextEntry={true}></TextInput>
           </View>
           <View >
               <View >
-              <Button buttonStyle={{borderRadius:50,width:100,backgroundColor:'#F5C2C2',marginBottom:5}}  onPress={go_to_home} color='#F5C2C2' title='Login'></Button>        
+              <Button  titleStyle={{fontSize: 22,}} buttonStyle={{borderRadius:50,width:100,backgroundColor:'#F5C2C2',marginBottom:5 }}  onPress={go_to_home} color='#F5C2C2' title='Login'></Button>        
               </View>
               <View >
-              <Button buttonStyle={{borderRadius:50,width:100,backgroundColor:'#F5C2C2',}}  onPress={go_to_register} title='Register'></Button>
+              <Button titleStyle={{fontSize: 22,}} buttonStyle={{borderRadius:50,width:100,backgroundColor:'#F5C2C2',}}  onPress={go_to_register} title='Register'></Button>
               </View>
           </View>
     
@@ -65,7 +67,7 @@ export default function LoginScreen({navigation}) {
          borderRadius : 30,
          width:'100%',
          paddingHorizontal: 10,
-         marginVertical:7,
+         marginVertical:5,
       },
       container: {
         flex: 1,
